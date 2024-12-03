@@ -7,9 +7,17 @@ const server = express();
 
 //Routes
 
-//1. Test
+///1. Test
+server.get("/", function(request, response){
+    response.send("Dragon is up ...");
+})
+
 server.get("/test", (request, response) => {
 
+    response.send({
+        message: "Server is running fine ...",
+        code: "test-okay"
+    });
 
 
 })
